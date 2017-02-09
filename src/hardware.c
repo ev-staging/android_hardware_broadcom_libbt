@@ -49,6 +49,9 @@
 #include "userial.h"
 #include "userial_vendor.h"
 #include "upio.h"
+#ifdef SAMSUNG_BLUETOOTH
+#include <samsung_macloader.h>
+#endif
 
 /******************************************************************************
 **  Constants & Macros
@@ -116,9 +119,6 @@ struct btlock {
     int lock;
     int cookie;
 };
-#endif
-#ifdef SAMSUNG_BLUETOOTH
-#define CID_PATH "/data/.cid.info"
 #endif
 
 /******************************************************************************
